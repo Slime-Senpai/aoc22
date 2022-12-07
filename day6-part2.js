@@ -1,0 +1,1 @@
+inputString.split('').findIndex((a, i, arr) => i > 12 && !(arr.slice(i-13, i).map((b, j, array)  => [...array.slice(0, j), ...array.slice(j+1)].includes(b)).reduce((t, s) => t || s, false)) && !arr.slice(i-13, i).includes(a)) + 1
