@@ -96,8 +96,9 @@ Working with arrays again urghhhhh
 inputString.split('\n').flatMap((e, i) => i === 0 ? [e, e] : e).map((e, i) => i === 0 ? window.trees = [] : window.trees[i-1] = e.split('').map(f => {return { h: parseInt(f) }})).reduce(() => window.trees).map((row, i) => row.forEach((tree, j) =>  i === 0 || j === 0 || i === (window.trees.length-1) || j === (row.length-1) ? tree.visible = true : row.slice(0, j).every(tl => tl.h < tree.h) || row.slice(j+1).every(tr => tr.h < tree.h) || Array(i).fill(0).every((_, tu) => window.trees[tu][j].h < tree.h) || Array(window.trees.length - (i+1)).fill(0).every((_, td) => window.trees[window.trees.length - td - 1][j].h < tree.h) ? tree.visible = true : '')).reduce(() => window.trees).reduce((c, d) => c + d.reduce((a, b) => b.visible ? a + 1 : a, 0), 0)
 ```
 ### Part 2
+So much trouble to find the right solution on this one URGHHH
 ```js
-
+inputString.split('\n').flatMap((e, i) => i === 0 ? [e, e] : e).map((e, i) => i === 0 ? window.trees = [] : window.trees[i-1] = e.split('').map(f => {return { h: parseInt(f), u: 0, d: 0, l: 0, r: 0 }})).reduce(() => window.trees).map((row, i) => row.forEach((tree, j) => (row.slice(0, j).reverse().every(tl => (tree.l++ > Infinity) || tl.h < tree.h) && false) || (row.slice(j+1).every(tr => (tree.r++ > Infinity) || tr.h < tree.h) && false) || ((i > 0 ? Array(i).fill(0).every((_, tu) => (tree.u++ > Infinity) || window.trees[i - 1 - tu][j].h < tree.h) : false) && false) || ((i > 0 ? Array(window.trees.length - i - 1).fill(0).every((_, td) => (tree.d++ > Infinity) || window.trees[i + td + 1][j].h < tree.h) : false) && false) ? '' : '')).reduce(() => window.trees).map(e => e.reduce((a, b) => (b.u * b.d * b.l * b.r) > a ? (b.u * b.d * b.l * b.r) : a, 0)).reduce((a, b) => a > b ? a : b)
 ```
 ## Day 9
 ### Part 1
