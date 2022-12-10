@@ -113,8 +113,9 @@ inputString.split('\n').flatMap((e, i) => i === 0 ? [e, e] : e).map(e => [e.spli
 ```
 ## Day 10
 ### Part 1
+Was kinda fun to work with, and not as hard as last one so a good breather
 ```js
-
+inputString.split('\n').flatMap((e, i) => i === 0 ? [e, e] : e).map(e => e.split(' ')).map((e, i) => i === 0 ? ( window.obj = { x: 1, c: 0, check: 20, strength: 0 } ) : ( e[0] === 'addx' ? ( Array(2).fill().forEach(() => ++window.obj.c === window.obj.check ? Array(2).fill().forEach((_, i) => i === 0 ? window.obj.strength += window.obj.x * window.obj.c : window.obj.check += 40) : '') || ( window.obj.x += parseInt(e[1]) ) ) : ( ++window.obj.c === window.obj.check ) ? Array(2).fill().forEach((_, i) => i === 0 ? ( window.obj.strength += window.obj.x * window.obj.c ) : window.obj.check += 40) : ''))
 ```
 ### Part 2
 ```js
