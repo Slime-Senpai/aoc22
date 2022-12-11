@@ -12,6 +12,8 @@ After struggling with some of the harder challenges, I'll allow myself to use wi
 
 This code is not made to be proper nor human readable, but mostly a fun challenge for me. Don't expect it to be performant or beautiful!
 
+Day 11 update: Time to stop this madness. It takes too much time and I've been abusing the Array(X).fill().forEach() to do multi line in a single line. As this is no longer a proper way to do this challenge I'll just continue with regular JS code sadly. It was still fun for 10 days. And who knows, maybe later days will see some oneliners.
+
 ## Day 1
 ### Part 1
 This was done at work during a project build. After a friend found it funny that I was using one liners, it started the whole special rules chaos
@@ -124,13 +126,9 @@ inputString.split('\n').flatMap((e, i) => i === 0 ? [e, e] : e).map(e => e.split
 ```
 ## Day 11
 ### Part 1
-```js
-
-```
+See File 
 ### Part 2
-```js
-
-```
+See File
 ## Day 12
 ### Part 1
 ```js
